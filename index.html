@@ -37,7 +37,6 @@
       line-height: 1.6;
     }
 
-    /* GRID BG */
     body::before {
       content: '';
       position: fixed; inset: 0; z-index: 0;
@@ -48,12 +47,10 @@
       pointer-events: none;
     }
 
-    /* BLOBS */
     .bg-blob { position: fixed; border-radius: 50%; filter: blur(120px); pointer-events: none; z-index: 0; }
     .blob1 { width: 600px; height: 600px; background: rgba(108,99,255,0.1); top: -200px; right: -150px; }
     .blob2 { width: 500px; height: 500px; background: rgba(56,189,248,0.05); bottom: -200px; left: -100px; }
 
-    /* NAV */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
       background: rgba(13,15,20,0.85);
@@ -88,7 +85,6 @@
     .nav-badge::before { content:''; width:5px; height:5px; border-radius:50%; background:#34d399; animation: pulse 2s infinite; }
     @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
 
-    /* SECTIONS */
     section {
       position: relative; z-index: 1;
       min-height: 100vh; padding: 96px 52px 64px;
@@ -98,7 +94,6 @@
     #hero { display: none; flex-direction: column; justify-content: center; padding-top: 130px; }
     #hero.active { display: flex; }
 
-    /* HERO */
     .hero-eyebrow {
       display: inline-flex; align-items: center; gap: 8px;
       font-family: 'JetBrains Mono', monospace;
@@ -137,7 +132,6 @@
     .stat-num { font-size: 1.7rem; font-weight: 800; background: linear-gradient(135deg,var(--accent2),var(--accent3)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; font-family: 'JetBrains Mono', monospace; }
     .stat-label { font-size: 0.65rem; color: var(--muted2); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 3px; }
 
-    /* PAGE HEADER */
     .page-header { margin-bottom: 48px; }
     .page-eyebrow {
       font-family: 'JetBrains Mono', monospace; font-size: 0.65rem;
@@ -149,7 +143,6 @@
     .page-title .accent { background: linear-gradient(135deg,var(--accent2),var(--accent3)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
     .page-sub { font-size: 0.82rem; color: var(--muted); margin-top: 10px; font-family: 'JetBrains Mono', monospace; }
 
-    /* CARD */
     .card {
       background: var(--card); border: 1px solid var(--border);
       border-radius: var(--radius); padding: 26px;
@@ -164,7 +157,6 @@
     }
     .section-label::after { content:''; flex:1; height:1px; background: var(--border); }
 
-    /* CV */
     .cv-grid { display: grid; grid-template-columns: 1fr 1.7fr; gap: 20px; }
     .cv-col { display: flex; flex-direction: column; gap: 18px; }
     .info-label { font-family:'JetBrains Mono',monospace; font-size:0.6rem; color:var(--muted2); text-transform:uppercase; letter-spacing:0.12em; margin-bottom:3px; }
@@ -182,7 +174,6 @@
     .pill-purple { background:rgba(108,99,255,0.12); color:var(--accent2); border:1px solid var(--accent-border); }
     .pill-green { background:rgba(52,211,153,0.1); color:#34d399; border:1px solid rgba(52,211,153,0.2); }
 
-    /* CV PROTECTED */
     .cv-protected-banner {
       margin-top:28px; background:var(--bg3);
       border:1px dashed var(--accent-border); border-radius:var(--radius);
@@ -201,7 +192,6 @@
     }
     .unlock-btn:hover { background:#7c74ff; }
 
-    /* SKILLS */
     .skills-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:18px; }
     .skill-cat-title { font-size:0.65rem; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:var(--accent); margin-bottom:18px; font-family:'JetBrains Mono',monospace; }
     .skill-item { margin-bottom:12px; }
@@ -213,7 +203,6 @@
     .tag { font-size:0.68rem; padding:4px 10px; border-radius:6px; font-family:'JetBrains Mono',monospace; background:var(--bg3); color:var(--muted); border:1px solid var(--border); transition:all 0.2s; }
     .tag:hover { background:var(--accent-glow); color:var(--accent2); border-color:var(--accent-border); }
 
-    /* PROJECTS */
     .projects-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(310px,1fr)); gap:18px; }
     .project-card {
       background:var(--card); border:1px solid var(--border);
@@ -233,7 +222,6 @@
     .project-stack { display:flex; flex-wrap:wrap; gap:5px; }
     .stack-tag { font-size:0.62rem; padding:3px 8px; border-radius:5px; font-family:'JetBrains Mono',monospace; background:var(--accent-glow); color:var(--accent2); border:1px solid var(--accent-border); }
 
-    /* CERTIFS */
     .certifs-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:14px; }
     .certif-card { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:20px; display:flex; gap:14px; align-items:flex-start; box-shadow:var(--shadow); transition:all 0.25s; }
     .certif-card:hover { border-color:var(--border-hover); box-shadow:var(--shadow-hover); }
@@ -242,7 +230,6 @@
     .certif-org { font-size:0.72rem; color:var(--muted); font-family:'JetBrains Mono',monospace; }
     .certif-year { font-size:0.62rem; color:var(--accent2); font-family:'JetBrains Mono',monospace; margin-top:4px; }
 
-    /* TABLEAU DE SYNTHÈSE */
     .synthese-intro {
       background: var(--bg2); border: 1px solid var(--border);
       border-radius: var(--radius); padding: 24px; margin-bottom: 28px;
@@ -254,7 +241,6 @@
     .meta-val a { color: var(--accent3); text-decoration: none; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; }
     .meta-val a:hover { color: var(--accent2); }
 
-    /* Compétences legend */
     .comp-legend { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 28px; }
     .comp-chip {
       background: var(--bg2); border: 1px solid var(--border);
@@ -269,7 +255,6 @@
     .comp-chip.c5 strong { color: #f472b6; }
     .comp-chip.c6 strong { color: #facc15; }
 
-    /* Tableau section block */
     .synthese-block { margin-bottom: 32px; }
     .synthese-block-title {
       font-family: 'JetBrains Mono', monospace; font-size: 0.65rem;
@@ -279,7 +264,6 @@
     }
     .synthese-block-title::after { content:''; flex:1; height:1px; background: var(--border); }
 
-    /* Realisation row */
     .real-row {
       background: var(--card); border: 1px solid var(--border);
       border-radius: 10px; padding: 16px 18px;
@@ -306,7 +290,6 @@
     .badge-c5 { background: rgba(244,114,182,0.1); color: #f472b6; border: 1px solid rgba(244,114,182,0.2); }
     .badge-c6 { background: rgba(250,204,21,0.1); color: #facc15; border: 1px solid rgba(250,204,21,0.2); }
 
-    /* MODAL */
     .modal-overlay {
       position:fixed; inset:0; z-index:1000;
       background:rgba(5,7,12,0.75); backdrop-filter:blur(8px);
@@ -342,7 +325,6 @@
     .modal-confirm { padding:9px 20px; border-radius:8px; border:none; background:var(--accent); color:white; font-size:0.8rem; font-weight:600; cursor:pointer; transition:all 0.2s; font-family:'Syne',sans-serif; box-shadow:0 0 16px rgba(108,99,255,0.3); }
     .modal-confirm:hover { background:#7c74ff; }
 
-    /* CV LIGHTBOX */
     .cv-lightbox {
       position:fixed; inset:0; z-index:2000;
       background:rgba(5,7,12,0.97); backdrop-filter:blur(10px);
@@ -366,10 +348,6 @@
     .cv-lightbox-body { flex:1; display:flex; overflow:hidden; }
     .cv-lightbox-body iframe { flex:1; width:100%; height:100%; border:none; }
 
-    /* PROJECT MODAL */
-    #project-modal { position:fixed; inset:0; z-index:3000; background:rgba(5,7,12,0.8); backdrop-filter:blur(10px); display:flex; align-items:flex-start; justify-content:center; overflow-y:auto; padding:40px 20px; opacity:0; pointer-events:none; transition:opacity 0.3s; }
-
-    /* DOWNLOAD BAR */
     .download-bar {
       display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px;
       background: var(--bg3); border: 1px solid var(--accent-border);
@@ -394,13 +372,11 @@
       border: 1px solid var(--accent-border);
       box-shadow: none;
     }
-    .btn-download.outline:hover { background: var(--accent-glow); box-shadow: none; }
+    .btn-download.outline:hover { background: var(--accent-glow); box-shadow: none; transform: translateY(-2px); }
 
-    /* FOOTER */
     footer { position:relative; z-index:1; text-align:center; padding:32px; border-top:1px solid var(--border); font-family:'JetBrains Mono',monospace; font-size:0.65rem; color:var(--muted2); background:var(--bg); }
     footer span { color:var(--accent2); }
 
-    /* ANIMATIONS */
     @keyframes fadeUp { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
     .fade-up { animation:fadeUp 0.5s ease forwards; }
     .d1{animation-delay:0.08s;opacity:0} .d2{animation-delay:0.16s;opacity:0} .d3{animation-delay:0.24s;opacity:0} .d4{animation-delay:0.32s;opacity:0}
@@ -533,7 +509,6 @@
       <p>Mon CV détaillé est disponible en accès restreint.<br>Cliquez pour entrer le code d'accès.</p>
       <button class="unlock-btn">🔑 Accéder au CV</button>
     </div>
-    <!-- Barre de téléchargement CV (visible après déverrouillage) -->
     <div class="download-bar fade-up" id="cv-download-bar" style="display:none;margin-top:16px;">
       <div class="download-bar-info">
         <span class="dl-icon">📄</span>
@@ -708,16 +683,16 @@
           <span class="stack-tag">Cisco 3750G</span><span class="stack-tag">Cisco 2960</span><span class="stack-tag">pfSense</span>
           <span class="stack-tag">Windows Server</span><span class="stack-tag">GLPI</span><span class="stack-tag">Zabbix</span><span class="stack-tag">Veeam</span>
         </div>
-        <!-- Bouton téléchargement documentation -->
+        <!-- ✅ FICHIER AJOUTÉ : Documentation LPRS Organisation 2022 -->
         <div style="margin-top:24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;background:rgba(108,99,255,0.06);border:1px solid var(--accent-border);border-radius:12px;padding:16px 20px;">
           <div style="display:flex;align-items:center;gap:10px;">
             <span style="font-size:1.3rem;">📁</span>
             <div>
-              <div style="font-size:0.8rem;font-weight:600;color:var(--text2);">Documentation complète — Infra Réseau</div>
-              <div style="font-family:'JetBrains Mono',monospace;font-size:0.62rem;color:var(--muted);margin-top:2px;">documentation-infra-reseau.pdf · Plans, adressage IP, schémas</div>
+              <div style="font-size:0.8rem;font-weight:600;color:var(--text2);">Organisation LPRS — Document de référence</div>
+              <div style="font-family:'JetBrains Mono',monospace;font-size:0.62rem;color:var(--muted);margin-top:2px;">LPRS-Organisation2022.docx · Lycée Privé Robert Schuman</div>
             </div>
           </div>
-          <a href="documentation-infra-reseau.pdf" download class="btn-download">⬇ Télécharger la doc</a>
+          <a href="LPRS-Organisation2022.docx" download class="btn-download">⬇ Télécharger la doc (.docx)</a>
         </div>
       </div>
     </div>
@@ -731,7 +706,6 @@
       <p class="page-sub">// Réalisations professionnelles & compétences mobilisées</p>
     </div>
 
-    <!-- Infos candidat -->
     <div class="synthese-intro fade-up">
       <div class="synthese-meta">
         <div class="meta-item"><div class="meta-key">Candidat</div><div class="meta-val">Sancho Kenann</div></div>
@@ -742,7 +716,6 @@
       </div>
     </div>
 
-    <!-- Légende compétences -->
     <div class="synthese-block fade-up d1">
       <div class="synthese-block-title">Légende des compétences</div>
       <div class="comp-legend">
@@ -755,7 +728,6 @@
       </div>
     </div>
 
-    <!-- Réalisations en formation -->
     <div class="synthese-block fade-up d1">
       <div class="synthese-block-title">Réalisations en cours de formation</div>
 
@@ -765,11 +737,7 @@
           <span class="real-period">2024 – 2025</span>
         </div>
         <div class="comp-badges">
-          <span class="comp-badge badge-c1">C1</span>
-          <span class="comp-badge badge-c2">C2</span>
-          <span class="comp-badge badge-c4">C4</span>
-          <span class="comp-badge badge-c5">C5</span>
-          <span class="comp-badge badge-c6">C6</span>
+          <span class="comp-badge badge-c1">C1</span><span class="comp-badge badge-c2">C2</span><span class="comp-badge badge-c4">C4</span><span class="comp-badge badge-c5">C5</span><span class="comp-badge badge-c6">C6</span>
         </div>
       </div>
 
@@ -779,11 +747,7 @@
           <span class="real-period">2025 – 2026</span>
         </div>
         <div class="comp-badges">
-          <span class="comp-badge badge-c1">C1</span>
-          <span class="comp-badge badge-c2">C2</span>
-          <span class="comp-badge badge-c4">C4</span>
-          <span class="comp-badge badge-c5">C5</span>
-          <span class="comp-badge badge-c6">C6</span>
+          <span class="comp-badge badge-c1">C1</span><span class="comp-badge badge-c2">C2</span><span class="comp-badge badge-c4">C4</span><span class="comp-badge badge-c5">C5</span><span class="comp-badge badge-c6">C6</span>
         </div>
       </div>
 
@@ -793,12 +757,7 @@
           <span class="real-period">2025 – 2026</span>
         </div>
         <div class="comp-badges">
-          <span class="comp-badge badge-c1">C1</span>
-          <span class="comp-badge badge-c2">C2</span>
-          <span class="comp-badge badge-c3">C3</span>
-          <span class="comp-badge badge-c4">C4</span>
-          <span class="comp-badge badge-c5">C5</span>
-          <span class="comp-badge badge-c6">C6</span>
+          <span class="comp-badge badge-c1">C1</span><span class="comp-badge badge-c2">C2</span><span class="comp-badge badge-c3">C3</span><span class="comp-badge badge-c4">C4</span><span class="comp-badge badge-c5">C5</span><span class="comp-badge badge-c6">C6</span>
         </div>
       </div>
 
@@ -808,12 +767,7 @@
           <span class="real-period">2025 – 2026</span>
         </div>
         <div class="comp-badges">
-          <span class="comp-badge badge-c1">C1</span>
-          <span class="comp-badge badge-c2">C2</span>
-          <span class="comp-badge badge-c3">C3</span>
-          <span class="comp-badge badge-c4">C4</span>
-          <span class="comp-badge badge-c5">C5</span>
-          <span class="comp-badge badge-c6">C6</span>
+          <span class="comp-badge badge-c1">C1</span><span class="comp-badge badge-c2">C2</span><span class="comp-badge badge-c3">C3</span><span class="comp-badge badge-c4">C4</span><span class="comp-badge badge-c5">C5</span><span class="comp-badge badge-c6">C6</span>
         </div>
       </div>
 
@@ -823,12 +777,7 @@
           <span class="real-period">2025 – 2026</span>
         </div>
         <div class="comp-badges">
-          <span class="comp-badge badge-c1">C1</span>
-          <span class="comp-badge badge-c2">C2</span>
-          <span class="comp-badge badge-c3">C3</span>
-          <span class="comp-badge badge-c4">C4</span>
-          <span class="comp-badge badge-c5">C5</span>
-          <span class="comp-badge badge-c6">C6</span>
+          <span class="comp-badge badge-c1">C1</span><span class="comp-badge badge-c2">C2</span><span class="comp-badge badge-c3">C3</span><span class="comp-badge badge-c4">C4</span><span class="comp-badge badge-c5">C5</span><span class="comp-badge badge-c6">C6</span>
         </div>
       </div>
 
@@ -838,12 +787,7 @@
           <span class="real-period">2025 – 2026</span>
         </div>
         <div class="comp-badges">
-          <span class="comp-badge badge-c1">C1</span>
-          <span class="comp-badge badge-c2">C2</span>
-          <span class="comp-badge badge-c3">C3</span>
-          <span class="comp-badge badge-c4">C4</span>
-          <span class="comp-badge badge-c5">C5</span>
-          <span class="comp-badge badge-c6">C6</span>
+          <span class="comp-badge badge-c1">C1</span><span class="comp-badge badge-c2">C2</span><span class="comp-badge badge-c3">C3</span><span class="comp-badge badge-c4">C4</span><span class="comp-badge badge-c5">C5</span><span class="comp-badge badge-c6">C6</span>
         </div>
       </div>
 
@@ -853,17 +797,11 @@
           <span class="real-period">2025 – 2026</span>
         </div>
         <div class="comp-badges">
-          <span class="comp-badge badge-c1">C1</span>
-          <span class="comp-badge badge-c2">C2</span>
-          <span class="comp-badge badge-c3">C3</span>
-          <span class="comp-badge badge-c4">C4</span>
-          <span class="comp-badge badge-c5">C5</span>
-          <span class="comp-badge badge-c6">C6</span>
+          <span class="comp-badge badge-c1">C1</span><span class="comp-badge badge-c2">C2</span><span class="comp-badge badge-c3">C3</span><span class="comp-badge badge-c4">C4</span><span class="comp-badge badge-c5">C5</span><span class="comp-badge badge-c6">C6</span>
         </div>
       </div>
     </div>
 
-    <!-- Réalisations pro 1ère année -->
     <div class="synthese-block fade-up d2">
       <div class="synthese-block-title">Réalisations en milieu professionnel — 1ère année</div>
 
@@ -873,10 +811,7 @@
           <span class="real-period">05/2025 – 06/2025</span>
         </div>
         <div class="comp-badges">
-          <span class="comp-badge badge-c1">C1</span>
-          <span class="comp-badge badge-c2">C2</span>
-          <span class="comp-badge badge-c5">C5</span>
-          <span class="comp-badge badge-c6">C6</span>
+          <span class="comp-badge badge-c1">C1</span><span class="comp-badge badge-c2">C2</span><span class="comp-badge badge-c5">C5</span><span class="comp-badge badge-c6">C6</span>
         </div>
       </div>
 
@@ -886,10 +821,7 @@
           <span class="real-period">05/2025 – 06/2025</span>
         </div>
         <div class="comp-badges">
-          <span class="comp-badge badge-c1">C1</span>
-          <span class="comp-badge badge-c2">C2</span>
-          <span class="comp-badge badge-c5">C5</span>
-          <span class="comp-badge badge-c6">C6</span>
+          <span class="comp-badge badge-c1">C1</span><span class="comp-badge badge-c2">C2</span><span class="comp-badge badge-c5">C5</span><span class="comp-badge badge-c6">C6</span>
         </div>
       </div>
 
@@ -899,15 +831,11 @@
           <span class="real-period">05/2025 – 06/2025</span>
         </div>
         <div class="comp-badges">
-          <span class="comp-badge badge-c1">C1</span>
-          <span class="comp-badge badge-c2">C2</span>
-          <span class="comp-badge badge-c5">C5</span>
-          <span class="comp-badge badge-c6">C6</span>
+          <span class="comp-badge badge-c1">C1</span><span class="comp-badge badge-c2">C2</span><span class="comp-badge badge-c5">C5</span><span class="comp-badge badge-c6">C6</span>
         </div>
       </div>
     </div>
 
-    <!-- Réalisations pro 2ème année -->
     <div class="synthese-block fade-up d3">
       <div class="synthese-block-title">Réalisations en milieu professionnel — 2ème année</div>
 
@@ -917,10 +845,7 @@
           <span class="real-period">09/2025 – 07/2026</span>
         </div>
         <div class="comp-badges">
-          <span class="comp-badge badge-c1">C1</span>
-          <span class="comp-badge badge-c2">C2</span>
-          <span class="comp-badge badge-c5">C5</span>
-          <span class="comp-badge badge-c6">C6</span>
+          <span class="comp-badge badge-c1">C1</span><span class="comp-badge badge-c2">C2</span><span class="comp-badge badge-c5">C5</span><span class="comp-badge badge-c6">C6</span>
         </div>
       </div>
 
@@ -930,10 +855,7 @@
           <span class="real-period">09/2025 – 07/2026</span>
         </div>
         <div class="comp-badges">
-          <span class="comp-badge badge-c1">C1</span>
-          <span class="comp-badge badge-c2">C2</span>
-          <span class="comp-badge badge-c5">C5</span>
-          <span class="comp-badge badge-c6">C6</span>
+          <span class="comp-badge badge-c1">C1</span><span class="comp-badge badge-c2">C2</span><span class="comp-badge badge-c5">C5</span><span class="comp-badge badge-c6">C6</span>
         </div>
       </div>
 
@@ -943,11 +865,7 @@
           <span class="real-period">09/2025 – 07/2026</span>
         </div>
         <div class="comp-badges">
-          <span class="comp-badge badge-c1">C1</span>
-          <span class="comp-badge badge-c2">C2</span>
-          <span class="comp-badge badge-c4">C4</span>
-          <span class="comp-badge badge-c5">C5</span>
-          <span class="comp-badge badge-c6">C6</span>
+          <span class="comp-badge badge-c1">C1</span><span class="comp-badge badge-c2">C2</span><span class="comp-badge badge-c4">C4</span><span class="comp-badge badge-c5">C5</span><span class="comp-badge badge-c6">C6</span>
         </div>
       </div>
 
@@ -957,11 +875,7 @@
           <span class="real-period">09/2025 – 07/2026</span>
         </div>
         <div class="comp-badges">
-          <span class="comp-badge badge-c1">C1</span>
-          <span class="comp-badge badge-c2">C2</span>
-          <span class="comp-badge badge-c4">C4</span>
-          <span class="comp-badge badge-c5">C5</span>
-          <span class="comp-badge badge-c6">C6</span>
+          <span class="comp-badge badge-c1">C1</span><span class="comp-badge badge-c2">C2</span><span class="comp-badge badge-c4">C4</span><span class="comp-badge badge-c5">C5</span><span class="comp-badge badge-c6">C6</span>
         </div>
       </div>
 
@@ -971,11 +885,7 @@
           <span class="real-period">09/2025 – 07/2026</span>
         </div>
         <div class="comp-badges">
-          <span class="comp-badge badge-c1">C1</span>
-          <span class="comp-badge badge-c2">C2</span>
-          <span class="comp-badge badge-c4">C4</span>
-          <span class="comp-badge badge-c5">C5</span>
-          <span class="comp-badge badge-c6">C6</span>
+          <span class="comp-badge badge-c1">C1</span><span class="comp-badge badge-c2">C2</span><span class="comp-badge badge-c4">C4</span><span class="comp-badge badge-c5">C5</span><span class="comp-badge badge-c6">C6</span>
         </div>
       </div>
 
@@ -985,9 +895,7 @@
           <span class="real-period">09/2025 – 07/2026</span>
         </div>
         <div class="comp-badges">
-          <span class="comp-badge badge-c2">C2</span>
-          <span class="comp-badge badge-c5">C5</span>
-          <span class="comp-badge badge-c6">C6</span>
+          <span class="comp-badge badge-c2">C2</span><span class="comp-badge badge-c5">C5</span><span class="comp-badge badge-c6">C6</span>
         </div>
       </div>
 
@@ -997,11 +905,7 @@
           <span class="real-period">09/2025 – 07/2026</span>
         </div>
         <div class="comp-badges">
-          <span class="comp-badge badge-c1">C1</span>
-          <span class="comp-badge badge-c2">C2</span>
-          <span class="comp-badge badge-c4">C4</span>
-          <span class="comp-badge badge-c5">C5</span>
-          <span class="comp-badge badge-c6">C6</span>
+          <span class="comp-badge badge-c1">C1</span><span class="comp-badge badge-c2">C2</span><span class="comp-badge badge-c4">C4</span><span class="comp-badge badge-c5">C5</span><span class="comp-badge badge-c6">C6</span>
         </div>
       </div>
 
@@ -1011,10 +915,7 @@
           <span class="real-period">09/2025 – 07/2026</span>
         </div>
         <div class="comp-badges">
-          <span class="comp-badge badge-c1">C1</span>
-          <span class="comp-badge badge-c2">C2</span>
-          <span class="comp-badge badge-c5">C5</span>
-          <span class="comp-badge badge-c6">C6</span>
+          <span class="comp-badge badge-c1">C1</span><span class="comp-badge badge-c2">C2</span><span class="comp-badge badge-c5">C5</span><span class="comp-badge badge-c6">C6</span>
         </div>
       </div>
 
@@ -1024,15 +925,11 @@
           <span class="real-period">09/2025 – 07/2026</span>
         </div>
         <div class="comp-badges">
-          <span class="comp-badge badge-c1">C1</span>
-          <span class="comp-badge badge-c2">C2</span>
-          <span class="comp-badge badge-c5">C5</span>
-          <span class="comp-badge badge-c6">C6</span>
+          <span class="comp-badge badge-c1">C1</span><span class="comp-badge badge-c2">C2</span><span class="comp-badge badge-c5">C5</span><span class="comp-badge badge-c6">C6</span>
         </div>
       </div>
     </div>
 
-    <!-- Stats résumé -->
     <div class="card fade-up d4" style="background:var(--bg3);">
       <div class="section-label">Récapitulatif</div>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:12px;">
@@ -1054,19 +951,31 @@
         </div>
       </div>
     </div>
-    <!-- Barre de téléchargement tableau de synthèse -->
+
+    <!-- ✅ FICHIER 1 : Tableau de synthèse Excel -->
     <div class="download-bar fade-up">
       <div class="download-bar-info">
         <span class="dl-icon">📋</span>
         <div>
           <div class="dl-text">Tableau de Synthèse E5 — BTS SIO 2026</div>
-          <div class="dl-sub">tableau-synthese-kenann-sancho.pdf · Version imprimable</div>
+          <div class="dl-sub">tableau-synthese-kenann-sancho.xlsx · Version Excel officielle</div>
         </div>
       </div>
-      <a href="tableau-synthese-kenann-sancho.pdf" download class="btn-download">⬇ Télécharger le tableau</a>
+      <a href="tableau-synthese-kenann-sancho.xlsx" download class="btn-download">⬇ Télécharger le tableau (.xlsx)</a>
+    </div>
+
+    <!-- ✅ FICHIER 2 : Document Organisation LPRS -->
+    <div class="download-bar fade-up" style="margin-top:12px;">
+      <div class="download-bar-info">
+        <span class="dl-icon">🏫</span>
+        <div>
+          <div class="dl-text">Organisation LPRS — Document de référence</div>
+          <div class="dl-sub">LPRS-Organisation2022.docx · Lycée Privé Robert Schuman</div>
+        </div>
+      </div>
+      <a href="LPRS-Organisation2022.docx" download class="btn-download outline">⬇ Télécharger (.docx)</a>
     </div>
   </section>
-  <!-- ===================== FIN TABLEAU DE SYNTHÈSE ===================== -->
 
   <!-- FORMATIONS -->
   <section id="certifs">
@@ -1220,7 +1129,6 @@
     function revealCV() {
       document.getElementById('cv-lightbox').classList.add('open');
       document.body.style.overflow='hidden';
-      // Afficher aussi la barre de téléchargement sous la section CV
       const dlBar = document.getElementById('cv-download-bar');
       if(dlBar) dlBar.style.display='flex';
     }
