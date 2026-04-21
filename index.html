@@ -503,13 +503,7 @@
         </div>
       </div>
     </div>
-    <div id="cv-protected-zone" class="cv-protected-banner fade-up" onclick="openCVModal()">
-      <span class="lock-icon">🔒</span>
-      <h3>Consulter mon CV complet</h3>
-      <p>Mon CV détaillé est disponible en accès restreint.<br>Cliquez pour entrer le code d'accès.</p>
-      <button class="unlock-btn">🔑 Accéder au CV</button>
-    </div>
-    <div class="download-bar fade-up" id="cv-download-bar" style="display:none;margin-top:16px;">
+    <div class="download-bar fade-up" style="margin-top:28px;">
       <div class="download-bar-info">
         <span class="dl-icon">📄</span>
         <div>
@@ -517,7 +511,10 @@
           <div class="dl-sub">C_V-Sancho-Kenann.pdf · BTS SIO SISR 2026</div>
         </div>
       </div>
-      <a href="C_V-Sancho-Kenann.pdf" download class="btn-download">⬇ Télécharger le CV</a>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;">
+        <button onclick="revealCV()" class="btn-download outline">👁 Consulter le CV</button>
+        <a href="C_V-Sancho-Kenann.pdf" download class="btn-download">⬇ Télécharger le CV</a>
+      </div>
     </div>
   </section>
 
@@ -605,7 +602,7 @@
         </div>
       </div>
 
-      <div class="project-card fade-up d1" style="padding:30px;cursor:pointer;" onclick="openProjectCodeModal()">
+      <div class="project-card fade-up d1" style="padding:30px;cursor:pointer;" onclick="openProjectModal()">
         <div class="project-num">02 / BTS SIO · Infrastructure Réseau</div>
         <div class="project-title">🏫 Infrastructure réseau d'une école</div>
         <div class="project-desc">Conception et mise en place complète de l'infrastructure réseau d'un établissement scolaire. VLANs, routeurs et switches Cisco, DHCP/DNS, Active Directory, pare-feu pfSense. Documentation complète avec plans d'adressage IP.</div>
@@ -623,32 +620,14 @@
           <span class="stack-tag">Active Directory</span><span class="stack-tag">Pare-feu</span><span class="stack-tag">Packet Tracer</span>
         </div>
         <div style="display:inline-flex;align-items:center;gap:6px;background:var(--accent);color:white;padding:8px 18px;border-radius:8px;font-size:0.76rem;font-weight:600;pointer-events:none;box-shadow:0 0 16px rgba(108,99,255,0.3);">
-          🔒 Accéder à la documentation →
+          📂 Voir la documentation →
         </div>
       </div>
 
     </div>
   </section>
 
-  <!-- MODAL CODE PROJET -->
-  <div class="modal-overlay" id="project-code-modal" onclick="handleProjectOverlayClick(event)">
-    <div class="modal">
-      <div class="modal-icon">🔐</div>
-      <h2>Documentation protégée</h2>
-      <p>Entrez le code à 4 chiffres pour accéder à la documentation.</p>
-      <div class="code-inputs">
-        <input type="password" maxlength="1" id="p0" inputmode="numeric" autocomplete="off" oninput="handleProjectCodeInput(0)" onkeydown="handleProjectCodeKey(event,0)"/>
-        <input type="password" maxlength="1" id="p1" inputmode="numeric" autocomplete="off" oninput="handleProjectCodeInput(1)" onkeydown="handleProjectCodeKey(event,1)"/>
-        <input type="password" maxlength="1" id="p2" inputmode="numeric" autocomplete="off" oninput="handleProjectCodeInput(2)" onkeydown="handleProjectCodeKey(event,2)"/>
-        <input type="password" maxlength="1" id="p3" inputmode="numeric" autocomplete="off" oninput="handleProjectCodeInput(3)" onkeydown="handleProjectCodeKey(event,3)"/>
-      </div>
-      <div class="modal-error" id="project-code-error"></div>
-      <div class="modal-actions">
-        <button class="modal-cancel" onclick="closeProjectCodeModal()">Annuler</button>
-        <button class="modal-confirm" onclick="checkProjectCode()">Confirmer →</button>
-      </div>
-    </div>
-  </div>
+
 
   <!-- MODAL PROJET INFRA -->
   <div id="project-modal" style="position:fixed;inset:0;z-index:3000;background:rgba(5,7,12,0.85);backdrop-filter:blur(10px);display:flex;align-items:flex-start;justify-content:center;overflow-y:auto;padding:40px 20px;opacity:0;pointer-events:none;transition:opacity 0.3s;">
@@ -682,17 +661,6 @@
         <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:16px;">
           <span class="stack-tag">Cisco 3750G</span><span class="stack-tag">Cisco 2960</span><span class="stack-tag">pfSense</span>
           <span class="stack-tag">Windows Server</span><span class="stack-tag">GLPI</span><span class="stack-tag">Zabbix</span><span class="stack-tag">Veeam</span>
-        </div>
-        <!-- ✅ FICHIER AJOUTÉ : Documentation LPRS Organisation 2022 -->
-        <div style="margin-top:24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;background:rgba(108,99,255,0.06);border:1px solid var(--accent-border);border-radius:12px;padding:16px 20px;">
-          <div style="display:flex;align-items:center;gap:10px;">
-            <span style="font-size:1.3rem;">📁</span>
-            <div>
-              <div style="font-size:0.8rem;font-weight:600;color:var(--text2);">Organisation LPRS — Document de référence</div>
-              <div style="font-family:'JetBrains Mono',monospace;font-size:0.62rem;color:var(--muted);margin-top:2px;">LPRS-Organisation2022.docx · Lycée Privé Robert Schuman</div>
-            </div>
-          </div>
-          <a href="LPRS-Organisation2022.docx" download class="btn-download">⬇ Télécharger la doc (.docx)</a>
         </div>
       </div>
     </div>
@@ -952,29 +920,6 @@
       </div>
     </div>
 
-    <!-- ✅ FICHIER 1 : Tableau de synthèse Excel -->
-    <div class="download-bar fade-up">
-      <div class="download-bar-info">
-        <span class="dl-icon">📋</span>
-        <div>
-          <div class="dl-text">Tableau de Synthèse E5 — BTS SIO 2026</div>
-          <div class="dl-sub">tableau-synthese-kenann-sancho.xlsx · Version Excel officielle</div>
-        </div>
-      </div>
-      <a href="tableau-synthese-kenann-sancho.xlsx" download class="btn-download">⬇ Télécharger le tableau (.xlsx)</a>
-    </div>
-
-    <!-- ✅ FICHIER 2 : Document Organisation LPRS -->
-    <div class="download-bar fade-up" style="margin-top:12px;">
-      <div class="download-bar-info">
-        <span class="dl-icon">🏫</span>
-        <div>
-          <div class="dl-text">Organisation LPRS — Document de référence</div>
-          <div class="dl-sub">LPRS-Organisation2022.docx · Lycée Privé Robert Schuman</div>
-        </div>
-      </div>
-      <a href="LPRS-Organisation2022.docx" download class="btn-download outline">⬇ Télécharger (.docx)</a>
-    </div>
   </section>
 
   <!-- FORMATIONS -->
@@ -1013,26 +958,6 @@
     <p>© 2026 <span>Kenann Sancho</span> · BTS SIO SISR · Portfolio · Session 2026</p>
   </footer>
 
-  <!-- MODAL CV -->
-  <div class="modal-overlay" id="modal-overlay" onclick="handleOverlayClick(event)">
-    <div class="modal">
-      <div class="modal-icon">🔐</div>
-      <h2>Accès restreint</h2>
-      <p>Entrez le code à 4 chiffres pour consulter le CV complet.</p>
-      <div class="code-inputs">
-        <input type="password" maxlength="1" id="c0" inputmode="numeric" autocomplete="off" oninput="handleCodeInput(0)" onkeydown="handleCodeKey(event,0)"/>
-        <input type="password" maxlength="1" id="c1" inputmode="numeric" autocomplete="off" oninput="handleCodeInput(1)" onkeydown="handleCodeKey(event,1)"/>
-        <input type="password" maxlength="1" id="c2" inputmode="numeric" autocomplete="off" oninput="handleCodeInput(2)" onkeydown="handleCodeKey(event,2)"/>
-        <input type="password" maxlength="1" id="c3" inputmode="numeric" autocomplete="off" oninput="handleCodeInput(3)" onkeydown="handleCodeKey(event,3)"/>
-      </div>
-      <div class="modal-error" id="modal-error"></div>
-      <div class="modal-actions">
-        <button class="modal-cancel" onclick="closeModal()">Annuler</button>
-        <button class="modal-confirm" onclick="checkCode()">Confirmer →</button>
-      </div>
-    </div>
-  </div>
-
   <script>
     function showSection(id) {
       document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
@@ -1054,64 +979,6 @@
 
     const CORRECT_CODE = '1101';
 
-    function openCVModal() {
-      clearCodeInputs();
-      document.getElementById('modal-error').textContent='';
-      document.getElementById('modal-overlay').classList.add('open');
-      setTimeout(() => document.getElementById('c0').focus(), 150);
-    }
-    function closeModal() { document.getElementById('modal-overlay').classList.remove('open'); clearCodeInputs(); }
-    function handleOverlayClick(e) { if(e.target===document.getElementById('modal-overlay')) closeModal(); }
-    function handleCodeInput(i) {
-      const inp=document.getElementById('c'+i);
-      inp.classList.remove('error'); document.getElementById('modal-error').textContent='';
-      inp.value=inp.value.replace(/[^0-9]/g,'');
-      if(inp.value.length===1 && i<3) document.getElementById('c'+(i+1)).focus();
-      if(i===3 && inp.value.length===1) setTimeout(checkCode,150);
-    }
-    function handleCodeKey(e,i) {
-      if(e.key==='Backspace' && document.getElementById('c'+i).value==='' && i>0) document.getElementById('c'+(i-1)).focus();
-      if(e.key==='Enter') checkCode();
-    }
-    function clearCodeInputs() { for(let i=0;i<4;i++){document.getElementById('c'+i).value='';document.getElementById('c'+i).classList.remove('error');} }
-    function checkCode() {
-      const code=[0,1,2,3].map(i=>document.getElementById('c'+i).value).join('');
-      if(code===CORRECT_CODE){closeModal();revealCV();}
-      else{
-        document.getElementById('modal-error').textContent='❌ Code incorrect.';
-        for(let i=0;i<4;i++) document.getElementById('c'+i).classList.add('error');
-        setTimeout(()=>{clearCodeInputs();document.getElementById('c0').focus();},700);
-      }
-    }
-
-    function openProjectCodeModal() {
-      for(let i=0;i<4;i++){document.getElementById('p'+i).value='';document.getElementById('p'+i).classList.remove('error');}
-      document.getElementById('project-code-error').textContent='';
-      document.getElementById('project-code-modal').classList.add('open');
-      setTimeout(()=>document.getElementById('p0').focus(),150);
-    }
-    function closeProjectCodeModal() { document.getElementById('project-code-modal').classList.remove('open'); }
-    function handleProjectOverlayClick(e) { if(e.target===document.getElementById('project-code-modal')) closeProjectCodeModal(); }
-    function handleProjectCodeInput(i) {
-      const inp=document.getElementById('p'+i);
-      inp.classList.remove('error'); document.getElementById('project-code-error').textContent='';
-      inp.value=inp.value.replace(/[^0-9]/g,'');
-      if(inp.value.length===1 && i<3) document.getElementById('p'+(i+1)).focus();
-      if(i===3 && inp.value.length===1) setTimeout(checkProjectCode,150);
-    }
-    function handleProjectCodeKey(e,i) {
-      if(e.key==='Backspace' && document.getElementById('p'+i).value==='' && i>0) document.getElementById('p'+(i-1)).focus();
-      if(e.key==='Enter') checkProjectCode();
-    }
-    function checkProjectCode() {
-      const code=[0,1,2,3].map(i=>document.getElementById('p'+i).value).join('');
-      if(code===CORRECT_CODE){closeProjectCodeModal();openProjectModal();}
-      else{
-        document.getElementById('project-code-error').textContent='❌ Code incorrect.';
-        for(let i=0;i<4;i++) document.getElementById('p'+i).classList.add('error');
-        setTimeout(()=>{for(let i=0;i<4;i++){document.getElementById('p'+i).value='';document.getElementById('p'+i).classList.remove('error');}document.getElementById('p0').focus();},700);
-      }
-    }
     function openProjectModal() {
       const m=document.getElementById('project-modal');
       m.style.opacity='1'; m.style.pointerEvents='all';
@@ -1129,12 +996,10 @@
     function revealCV() {
       document.getElementById('cv-lightbox').classList.add('open');
       document.body.style.overflow='hidden';
-      const dlBar = document.getElementById('cv-download-bar');
-      if(dlBar) dlBar.style.display='flex';
     }
     function closeLightbox() { document.getElementById('cv-lightbox').classList.remove('open'); document.body.style.overflow=''; }
     document.addEventListener('keydown',function(e){
-      if(e.key==='Escape'){closeLightbox();closeProjectModal();closeProjectCodeModal();}
+      if(e.key==='Escape'){closeLightbox();closeProjectModal();}
     });
   </script>
 </body>
